@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.shashank.sony.fancytoastlib.FancyToast;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,5 +16,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn(View view) {
+        FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
+
     }
 }
