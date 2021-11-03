@@ -21,14 +21,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void btn(View view) {
-        FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
 
-    }
 
     public void onLoginClick(View view) {
-        //Descomentar despues
-        //startActivity(new Intent(this,RegisterActivity.class));
+
+        startActivity(new Intent(this,RegisterActivity.class));
         overridePendingTransition(R.anim.slide_in_right,R.anim.stay);
     }
 }
