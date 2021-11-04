@@ -80,18 +80,7 @@
                                 android:maxLines="1" />
                         </com.google.android.material.textfield.TextInputLayout>
 
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/textInputMobile"
-                            style="@style/parent"
-                            android:layout_marginTop="@dimen/loginViewsMargin">
 
-                            <EditText
-                                android:id="@+id/editTextMobile"
-                                style="@style/modifiedEditText"
-                                android:hint="Mobile Number"
-                                android:inputType="phone"
-                                android:maxLines="1" />
-                        </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/textInputPassword"
@@ -107,6 +96,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <Button
+                            android:id="@+id/mButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

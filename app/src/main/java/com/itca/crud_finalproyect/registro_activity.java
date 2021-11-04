@@ -1,5 +1,6 @@
 package com.itca.crud_finalproyect;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,15 +9,117 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCanceledListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.shashank.sony.fancytoastlib.FancyToast;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class registro_activity extends AppCompatActivity {
+    private EditText editTextName;
+    private EditText editTextEmail;
+    private EditText editTextPassword;
+
+    private Button mButton;
+    
+    String name="";
+    String email="";
+    String pass="";
+
+    FirebaseAuth mAuth;
+    DatabaseReference mDatabase;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+
+        mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
         changeStatusBarColor();
+        
+        editTextName = (EditText) findViewById(R.id.editTextName);
+        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        
+        mButton =(Button) findViewById(R.id.mButton);
+        
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                name = editTextName.getText().toString();
+                email = editTextEmail.getText().toString();
+                pass = editTextPassword.getText().toString();
+                
+                
+                if (!name.isEmpty() && !email.isEmpty() && !pass.isEmpty()) {
+                    if(pass.length() >=6){
+                        registerUser();
+                    }
+                    else {
+                        FancyToast.makeText(registro_activity.this,"La contraseña debe tener al menos 6 caracteres",FancyToast.LENGTH_LONG, FancyToast.WARNING,true);
+                    }
+
+                }
+                else {
+                    FancyToast.makeText(registro_activity.this,"Debe completar los campos",FancyToast.LENGTH_LONG,FancyToast.WARNING,true);
+
+                }
+                
+            }
+        });
+        
     }
+
+    private void registerUser() {
+        mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    Map<String, Object> map = new HashMap<>();
+                    map.put("name", name);
+                    map.put("email", email);
+                    map.put("pass", pass);
+
+                    String id = mAuth.getCurrentUser().getUid();
+
+                    mDatabase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task2) {
+                            if(task2.isSuccessful()){
+                                startActivity(new Intent(registro_activity.this, HomeActivity.class ));
+                                finish();
+                            }
+                            else {
+                                FancyToast.makeText(registro_activity.this,"No se pudieron crear los datos correctamente",FancyToast.LENGTH_LONG,FancyToast.ERROR,true);
+
+                            }
+                        }
+                    });
+                }
+                else {
+                    FancyToast.makeText(registro_activity.this,"No se pudo registrar este usuario",FancyToast.LENGTH_LONG,FancyToast.ERROR,true);
+
+                }
+            }
+        });
+    }
+
+
     private void changeStatusBarColor() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
