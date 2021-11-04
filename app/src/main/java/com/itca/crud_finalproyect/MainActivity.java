@@ -26,5 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(new Intent(MainActivity.this, registro_activity.class));
         overridePendingTransition(R.anim.slide_in_right,R.anim.stay);
+        finish();
     }
 }

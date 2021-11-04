@@ -30,5 +30,6 @@ public class registro_activity extends AppCompatActivity {
     public void onLoginClick(View view) {
         startActivity(new Intent(this, MainActivity.class));
         overridePendingTransition(R.anim.slide_in_left,android.R.anim.slide_out_right);
+        finish();
     }
     }
