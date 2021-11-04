@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CRUD_FinalProyect">
         <activity
+            android:name=".registro_activity"
+            android:exported="true" />
+        <activity
             android:name=".HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home"
