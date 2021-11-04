@@ -34,7 +34,7 @@ public class registro_activity extends AppCompatActivity {
     
     String name="";
     String email="";
-    String pass="";
+    String password="";
 
     FirebaseAuth mAuth;
     DatabaseReference mDatabase;
@@ -63,20 +63,20 @@ public class registro_activity extends AppCompatActivity {
             public void onClick(View view) {
                 name = editTextName.getText().toString();
                 email = editTextEmail.getText().toString();
-                pass = editTextPassword.getText().toString();
+                password = editTextPassword.getText().toString();
                 
                 
-                if (!name.isEmpty() && !email.isEmpty() && !pass.isEmpty()) {
-                    if(pass.length() >=6){
+                if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
+                    if(password.length() >=6){
                         registerUser();
                     }
                     else {
-                        FancyToast.makeText(registro_activity.this,"La contraseña debe tener al menos 6 caracteres",FancyToast.LENGTH_LONG, FancyToast.WARNING,true);
+                        FancyToast.makeText(registro_activity.this,"La contraseña debe tener al menos 6 caracteres",FancyToast.LENGTH_LONG, FancyToast.WARNING,true).show();
                     }
 
                 }
                 else {
-                    FancyToast.makeText(registro_activity.this,"Debe completar los campos",FancyToast.LENGTH_LONG,FancyToast.WARNING,true);
+                    FancyToast.makeText(registro_activity.this,"Debe completar los campos",FancyToast.LENGTH_LONG,FancyToast.WARNING,true).show();
 
                 }
                 
@@ -86,14 +86,15 @@ public class registro_activity extends AppCompatActivity {
     }
 
     private void registerUser() {
-        mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     Map<String, Object> map = new HashMap<>();
                     map.put("name", name);
                     map.put("email", email);
-                    map.put("pass", pass);
+                    map.put("pass", password);
 
                     String id = mAuth.getCurrentUser().getUid();
 
@@ -105,14 +106,14 @@ public class registro_activity extends AppCompatActivity {
                                 finish();
                             }
                             else {
-                                FancyToast.makeText(registro_activity.this,"No se pudieron crear los datos correctamente",FancyToast.LENGTH_LONG,FancyToast.ERROR,true);
+                                FancyToast.makeText(registro_activity.this,"No se pudieron crear los datos correctamente",FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
 
                             }
                         }
                     });
                 }
                 else {
-                    FancyToast.makeText(registro_activity.this,"No se pudo registrar este usuario",FancyToast.LENGTH_LONG,FancyToast.ERROR,true);
+                    FancyToast.makeText(registro_activity.this,"No se pudo registrar este usuario",FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
 
                 }
             }
