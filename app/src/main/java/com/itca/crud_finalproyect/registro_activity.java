@@ -102,6 +102,7 @@ public class registro_activity extends AppCompatActivity {
                     FancyToast.makeText(registro_activity.this,"Usuario registrado correctamente",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
                     Intent i = new Intent(registro_activity.this, HomeActivity.class);
                     startActivity(i);
+                    finish();
 
 
                 }
