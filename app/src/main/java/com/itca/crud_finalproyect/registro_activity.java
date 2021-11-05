@@ -98,19 +98,12 @@ public class registro_activity extends AppCompatActivity {
 
                     String id = mAuth.getCurrentUser().getUid();
 
-                    mDatabase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task2) {
-                            if(task2.isSuccessful()){
-                                startActivity(new Intent(registro_activity.this, HomeActivity.class ));
-                                finish();
-                            }
-                            else {
-                                FancyToast.makeText(registro_activity.this,"No se pudieron crear los datos correctamente",FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
+                    mDatabase.child("Users").child(id).setValue(map);
+                    FancyToast.makeText(registro_activity.this,"Usuario registrado correctamente",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
+                    Intent i = new Intent(registro_activity.this, HomeActivity.class);
+                    startActivity(i);
 
-                            }
-                        }
-                    });
+
                 }
                 else {
                     FancyToast.makeText(registro_activity.this,"No se pudo registrar este usuario",FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
