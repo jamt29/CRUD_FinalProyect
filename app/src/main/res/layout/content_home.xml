@@ -9,7 +9,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_home">
     
-    <androidx.cardview.widget.CardView
+      <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -18,8 +18,8 @@
             android:layout_margin="8dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground">
-        
-         <ImageView
+
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -39,9 +39,34 @@
         </androidx.cardview.widget.CardView>
 
 
-        
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            card_view:cardCornerRadius="35dp"
+            card_view:cardElevation="10dp"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pro" />
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#8C090753"
+                android:padding="10dp"
+                android:text="Productos"
+                android:textColor="#009688"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
 
 
-
-
-</androidx.appcompat.widget.LinearLayoutCompat>
