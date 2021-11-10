@@ -100,7 +100,7 @@ public class registro_activity extends AppCompatActivity {
 
                     mDatabase.child("Users").child(id).setValue(map);
                     FancyToast.makeText(registro_activity.this,"Usuario registrado correctamente",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
-                    Intent i = new Intent(registro_activity.this, HomeActivity.class);
+                    Intent i = new Intent(registro_activity.this,MainActivity.class);
                     startActivity(i);
                     finish();
 
