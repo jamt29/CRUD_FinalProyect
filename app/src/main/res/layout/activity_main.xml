@@ -32,7 +32,7 @@
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:text="Bienvenido!! \nIniciar \nSeccion?" />
+                    android:text="Bienvenido!! \nIniciar \nSesion?" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -52,7 +52,8 @@
                     style="@style/modifiedEditText"
                     android:hint="@string/login_email_hint"
                     android:inputType="textEmailAddress"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:texSize="20dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -65,7 +66,8 @@
                     style="@style/modifiedEditText"
                     android:hint="@string/login_password_hint"
                     android:inputType="textPassword"
-                    android:maxLines="1" />
+                    android:maxLines="1" 
+                    android:texSize="20dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
