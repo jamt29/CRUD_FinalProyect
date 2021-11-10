@@ -36,7 +36,8 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         mAuth = FirebaseAuth.getInstance();
-        mButtonC = (Button) findViewById(R.id.mButtonCerrar);
+        //boton de cerrar sesion
+      /*  mButtonC = (Button) findViewById(R.id.mButtonCerrar);
 
         mButtonC.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +47,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(i);
                 finish();
             }
-        });
+        });*/
 
         setSupportActionBar(binding.appBarHome.toolbar);
         binding.appBarHome.fab.setOnClickListener(new View.OnClickListener() {
