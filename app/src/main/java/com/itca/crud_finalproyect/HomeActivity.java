@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.cardview.widget.CardView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -48,6 +49,24 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         });*/
+
+        CardView card1 = (CardView) findViewById(R.id.cardView1);
+        CardView card2 = (CardView) findViewById(R.id.cardView2);
+
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomeActivity.this, productos.class);
+                startActivity(i);
+            }
+        });
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomeActivity.this, categoria.class);
+                startActivity(i);
+            }
+        });
 
         setSupportActionBar(binding.appBarHome.toolbar);
         binding.appBarHome.fab.setOnClickListener(new View.OnClickListener() {
