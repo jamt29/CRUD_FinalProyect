@@ -20,6 +20,8 @@
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.CRUD_FinalProyect.NoActionBar" />
         <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
