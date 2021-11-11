@@ -2,6 +2,7 @@ package com.itca.crud_finalproyect;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-public class SplashScreen extends AppCompatActivity {
+public class SplashScreen extends Activity {
 
 
     @Override
