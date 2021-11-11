@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Antonio/Desktop/crud_1/CRUD_FinalProyect/app/src/main/res/drawable/button_background_blue.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Antonio/Desktop/crud_1/CRUD_FinalProyect/app/src/main/res/drawable/ic_cerrar.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Antonio/Desktop/crud_1/CRUD_FinalProyect/app/src/main/res/drawable/side_nav_bar.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Antonio/Desktop/crud_1/CRUD_FinalProyect/app/src/main/res/layout/activity_categoria.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Antonio/Desktop/crud_1/CRUD_FinalProyect/app/src/main/res/layout/activity_home.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Antonio/Desktop/crud_1/CRUD_FinalProyect/app/src/main/res/layout/activity_main.xml" value="0.20462962962962963" />
@@ -14,7 +16,7 @@
         <entry key="..\:/Users/Antonio/Desktop/crud_1/CRUD_FinalProyect/app/src/main/res/layout/content_home.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Antonio/Desktop/crud_1/CRUD_FinalProyect/app/src/main/res/layout/fragment_gallery.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Antonio/Desktop/crud_1/CRUD_FinalProyect/app/src/main/res/layout/nav_header_home.xml" value="0.20833333333333334" />
-        <entry key="..\:/Users/Antonio/Desktop/crud_1/CRUD_FinalProyect/app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
+        <entry key="..\:/Users/Antonio/Desktop/crud_1/CRUD_FinalProyect/app/src/main/res/menu/activity_main_drawer.xml" value="0.22" />
         <entry key="..\:/Users/ITCA/AndroidStudioProjects/CRUD_FinalProyect/app/src/main/res/layout/activity_main.xml" value="0.36102564102564105" />
         <entry key="..\:/Users/ITCA/AndroidStudioProjects/CRUD_FinalProyect/app/src/main/res/layout/activity_registro.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/ITCA/AndroidStudioProjects/CRUD_FinalProyect/app/src/main/res/layout/content_home.xml" value="0.36666666666666664" />
