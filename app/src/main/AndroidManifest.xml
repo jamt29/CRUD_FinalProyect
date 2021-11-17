@@ -22,13 +22,16 @@
             android:exported="true" />
         <activity
             android:name=".busquedaCategoria"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.Transparent"/>
         <activity
             android:name=".productos"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.Transparent"/>
         <activity
             android:name=".categoria"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.Transparent"/>
         <activity
             android:name=".registro_activity"
             android:exported="true" />

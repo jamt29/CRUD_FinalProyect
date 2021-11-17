@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Categorias"
+                android:text="Categoria Nuevas"
                 android:layout_gravity="bottom"
                 android:background="#8C0C1A43"
                 android:textColor="#32CFC0"
@@ -63,11 +63,40 @@
                 android:layout_gravity="bottom"
                 android:background="#8C090753"
                 android:padding="10dp"
-                android:text="Productos"
+                android:text="Producto Nuevo"
                 android:textColor="#009688"
                 android:textSize="30sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="35dp"
+        card_view:cardElevation="10dp"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pr" />
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#8C090753"
+            android:padding="10dp"
+            android:text="Productos"
+            android:textColor="#009688"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

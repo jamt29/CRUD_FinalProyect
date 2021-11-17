@@ -2,6 +2,7 @@ package com.itca.crud_finalproyect;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,7 +26,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class busquedaCategoria extends AppCompatActivity {
+public class busquedaCategoria extends Activity {
 
     private Spinner sp_fk_categoria;
     private Button btnBuscar;

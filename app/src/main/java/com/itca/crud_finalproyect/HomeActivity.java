@@ -52,6 +52,7 @@ public class HomeActivity extends AppCompatActivity {
 
         CardView card1 = (CardView) findViewById(R.id.cardView1);
         CardView card2 = (CardView) findViewById(R.id.cardView2);
+        CardView card3 = (CardView) findViewById(R.id.cardView3);
 
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +65,13 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(HomeActivity.this, categoria.class);
+                startActivity(i);
+            }
+        });
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomeActivity.this, busquedaCategoria.class);
                 startActivity(i);
             }
         });
