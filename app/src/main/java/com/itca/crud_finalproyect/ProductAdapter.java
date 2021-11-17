@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class ProductAdapter {
+public class ProductAdapter extends RecyclerView.Adapter {
     private Context mCtx;
     private List<dto_catprod> productList;
 
@@ -46,6 +46,11 @@ public class ProductAdapter {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_rv_cons, parent, false);
         ProductViewHolder evh = new ProductViewHolder(v, mListener);
         return evh;
+
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
     }
 
