@@ -20,5 +20,6 @@
     <color name="whiteTextColor">#fff</color>
     <color name="primaryTextColor">#11CFC5</color>
     <color name="Cerrar">#FF0909</color>
+    <color name="blue">#0119A0</color>
 
 </resources>

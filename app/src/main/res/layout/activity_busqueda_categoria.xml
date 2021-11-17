@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".busquedaCategoria">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/sp_fk_categoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="@color/blue"
+        android:spinnerMode="dropdown"
+        android:entries="@array/sp_fk"
+        android:background="@drawable/botdise3"
+        style="@style/Widget.AppCompat.DropDownItem.Spinner"
+        />
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Buscar productos"
+        android:textColor="#FFF"
+        android:background="#B60404"
+        android:layout_marginTop="110dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        />
+    </LinearLayout>
+
+</RelativeLayout>
