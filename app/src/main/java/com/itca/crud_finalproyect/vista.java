@@ -106,6 +106,7 @@ public class vista extends AppCompatActivity {
 
         Intent i = new Intent(vista.this, busquedaCategoria.class);
         startActivity(i);
+        finish();
     }
 
 
