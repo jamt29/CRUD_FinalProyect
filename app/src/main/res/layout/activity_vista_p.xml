@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vistaP">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingLeft="5dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            />
+
+        <TextView
+            android:id="@+id/textViewBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retornar"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardBackgroundColor="#EAE6E6"
+        card_view:cardElevation="8dp"
+        card_view:cardUseCompatPadding="true">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    android:padding="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#C6C5BA"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/tv_NameCategoria"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="CATEGORIA"
+                            android:textColor="@color/black"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_codigo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="Código del Producto"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textAppearance="@android:style/TextAppearance" />
+
+                    <EditText
+                        android:id="@+id/et_codigoproducto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:hint="xxxxxxx"
+                        android:textSize="12sp"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="5dp"
+                        android:drawableStart="@drawable/ic_code"
+                        android:enabled="false"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvNameProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre del Producto"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textAppearance="@android:style/TextAppearance" />
+
+
+                    <EditText
+                        android:id="@+id/et_nombreproducto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="xxxxxxx"
+                        android:textSize="12sp"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="5dp"
+                        android:drawableStart="@drawable/ic_name_prod"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/tvDescripcion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Descripción del Producto"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textAppearance="@android:style/TextAppearance" />
+
+
+                    <EditText
+                        android:id="@+id/et_descripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="5dp"
+                        android:drawableStart="@drawable/ic_descripcion"
+                        android:textColor="#03168B"
+                        android:hint="XXXXXX"
+                        android:inputType="text"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvStock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stock"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:textAppearance="@android:style/TextAppearance" />
+
+
+                    <EditText
+                        android:id="@+id/et_stock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="1dp"
+                        android:drawableStart="@drawable/ic_stock"
+                        android:ems="10"
+                        android:hint="XXXXXXX"
+                        android:inputType="numberDecimal"
+                        android:textColor="#03168B"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvPrecio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Precio"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textAppearance="@android:style/TextAppearance" />
+
+
+                    <EditText
+                        android:id="@+id/et_precio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="1dp"
+                        android:drawableStart="@drawable/ic_money"
+                        android:ems="10"
+                        android:hint="XXXXXXXX"
+                        android:inputType="numberDecimal"
+                        android:textColor="#03168B"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvIdCategoria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Identificador Categoria"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textAppearance="@android:style/TextAppearance" />
+
+                    <EditText
+                        android:id="@+id/et_idcategoria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:ems="10"
+                        android:hint="XXXXXXXX"
+                        android:inputType="numberDecimal"
+                        android:textColor="#03168B"
+                        android:textSize="12sp"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="5dp"
+                        android:drawableStart="@drawable/ic_code"
+                        android:enabled="false"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_fecha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Fecha de creación"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="25dp"
+                        />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="bottom"
+                        android:background="#C6C5BA"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <Button
+                            android:id="@+id/btnActualizar"
+                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Actualizar"
+                            android:textSize="12sp"
+                            android:drawableLeft="@drawable/ic_edit"
+                            android:textColor="@color/black"
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:background="#EAE6E6"
+                            />
+
+
+                        <Button
+                            android:id="@+id/btnEliminar"
+                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Eliminar"
+                            android:textSize="12sp"
+                            android:drawableLeft="@drawable/ic_delete"
+                            android:textColor="@color/black"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
