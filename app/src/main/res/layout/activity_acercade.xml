@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/app_bar_home">
+    tools:context=".acercade">
 
 
     <ScrollView
@@ -21,7 +19,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 card_view:cardCornerRadius="35dp"
                 card_view:cardElevation="10dp"
                 android:layout_margin="8dp"
@@ -31,7 +29,6 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
                     android:src="@drawable/ado" />
 
                 <TextView
@@ -52,7 +49,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView1"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 card_view:cardCornerRadius="35dp"
                 card_view:cardElevation="10dp"
                 android:layout_margin="8dp"
@@ -71,7 +68,7 @@
                     android:layout_gravity="bottom"
                     android:background="#D016161E"
                     android:padding="10dp"
-                    android:text="Josue Adonis Morales Tores"
+                    android:text="Josue Adony Morales Tores"
                     android:textColor="#738DDC"
                     android:textSize="25dp"
                     android:textStyle="bold" />
@@ -81,7 +78,7 @@
                 android:id="@+id/cardView3"
                 android:background="#370808"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 card_view:cardCornerRadius="25dp"
                 card_view:cardElevation="10dp"
                 android:layout_margin="8dp"
@@ -110,7 +107,7 @@
                 android:id="@+id/cardView4"
                 android:background="#370808"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 card_view:cardCornerRadius="25dp"
                 card_view:cardElevation="10dp"
                 android:layout_margin="8dp"
@@ -158,4 +155,4 @@
     </ScrollView>
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

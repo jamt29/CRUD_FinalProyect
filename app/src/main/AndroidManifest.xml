@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
+            android:name=".acercade"
+            android:exported="true"
+            android:theme="@style/Theme.Transparent"/>
+        <activity
             android:name=".vistaP"
             android:exported="true" />
         <activity
@@ -23,15 +27,15 @@
         <activity
             android:name=".busquedaCategoria"
             android:exported="true"
-            android:theme="@style/Theme.Transparent"/>
+            android:theme="@style/Theme.Transparent" />
         <activity
             android:name=".productos"
             android:exported="true"
-            android:theme="@style/Theme.Transparent"/>
+            android:theme="@style/Theme.Transparent" />
         <activity
             android:name=".categoria"
             android:exported="true"
-            android:theme="@style/Theme.Transparent"/>
+            android:theme="@style/Theme.Transparent" />
         <activity
             android:name=".registro_activity"
             android:exported="true" />

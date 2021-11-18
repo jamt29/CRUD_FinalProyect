@@ -108,6 +108,31 @@
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/cerrarsesion"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/botdise3"
+                    android:text="Cerrar Sesion"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/acercade"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/botdise3"
+                    android:text="Acerca De"
+                    />
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>

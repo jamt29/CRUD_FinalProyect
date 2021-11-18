@@ -26,7 +26,8 @@ public class HomeActivity extends Activity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomeBinding binding;
 
-    private Button mButtonC;
+    private Button cerrarsesion;
+    private Button acercade;
 
     private FirebaseAuth mAuth;
 
@@ -39,9 +40,9 @@ public class HomeActivity extends Activity {
 
         mAuth = FirebaseAuth.getInstance();
         //boton de cerrar sesion
-      /*  mButtonC = (Button) findViewById(R.id.mButtonCerrar);
+       cerrarsesion = (Button) findViewById(R.id.cerrarsesion);
 
-        mButtonC.setOnClickListener(new View.OnClickListener() {
+        cerrarsesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mAuth.signOut();
@@ -49,7 +50,17 @@ public class HomeActivity extends Activity {
                 startActivity(i);
                 finish();
             }
-        });*/
+        });
+
+        acercade = (Button) findViewById(R.id.acercade);
+
+        acercade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomeActivity.this, acercade.class);
+                startActivity(i);
+            }
+        });
 
         CardView card1 = (CardView) findViewById(R.id.cardView1);
         CardView card2 = (CardView) findViewById(R.id.cardView2);
