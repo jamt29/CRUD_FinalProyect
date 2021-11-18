@@ -145,10 +145,9 @@ public class busquedaCategoria extends Activity {
 
                                 lista.add(listaCategorias.get(i).getId_categoria() + " ~ " + listaCategorias.get(i).getNom_categoria());
 
-                                //Creo un adaptador para cargar la lista preparada anteriormente.
-                                //ArrayAdapter<String> adaptador = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, obtenerListaCategorias());
+                                
                                 ArrayAdapter<String> adaptador = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, lista);
-                                //Cargo los datos en el Spinner
+                               
                                 sp_fk_categoria.setAdapter(adaptador);
 
                                 //Muestro datos en LogCat para verificar la respuesta obtenida desde el servidor.
