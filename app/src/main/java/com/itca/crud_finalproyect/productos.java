@@ -46,7 +46,7 @@ public class productos extends Activity {
 
     ProgressDialog progressDialog;
     ArrayList<String> lista = null;
-    ArrayList<dto_categorias> listaCategorias;               //Va a representar la información que se va a mostrar en el combo
+    ArrayList<dto_categorias> listaCategorias;              
 
     //Arreglos para efectuar pruebas de carga de opciones en spinner.
     String elementos[] = {"Uno", "Dos", "Tres", "Cuatro", "Cinco"};
@@ -112,11 +112,10 @@ public class productos extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(conta>=1 && sp_fk_categoria.getSelectedItemPosition()>0){
                     String item_spinner= sp_fk_categoria.getSelectedItem().toString();
-                    //Hago una busqueda en la cadena seleccionada en el spinner para separar el idcategoria y el nombre de la categoria
-                    //Esto es necesario, debido a que lo que debe enviarse a guardar a la base de datos es únicamente el idcategoria.
+                  
                     String s[] = item_spinner.split("~");
                     //Dato ID CATEGORIA
-                    idcategoria = s[0].trim();        //Con trim elimino espacios al inicio y final de la cadena para enviar limpio el ID CATEGORIA.
+                    idcategoria = s[0].trim();        
                     //Dato NOMBRE DE LA CATEGORIA
                     nombrecategoria = s[1];
 
@@ -220,8 +219,7 @@ public class productos extends Activity {
                                 //Agrego todos los registros en el arraylist
                                 listaCategorias.add(obj_categorias);
 
-                                //Saco la información del arraylist y personalizo la forma en que deseo se muestren los datos en el spinner y
-                                //Selecciono que datos se van a mostrar del resultado.
+                             
                                 lista.add(listaCategorias.get(i).getId_categoria()+" ~ "+listaCategorias.get(i).getNom_categoria());
 
                                 ArrayAdapter<String> adaptador = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item, lista);
@@ -251,9 +249,6 @@ public class productos extends Activity {
 
 
 
-    /*private void save_productos(final Context context, final int id_prod, final String nom_prod, final String des_prod,
-                                final double stock, final double precio, final String uni_medida, final int estado_prod,
-                                final int categoria){*/
     private void save_productos(final Context context, final String id_producto, final String nom_producto, final String des_producto,
                                 final String stock, final String precio, final String unidad_medida, final String estado_producto,
                                 final String categoria){

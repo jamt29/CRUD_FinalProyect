@@ -184,7 +184,7 @@ public class vistaP extends AppCompatActivity {
 
 
     //Método que permite actualizar un registro de producto en la base de datos.
-    //public void updateProductos(final Context context, final dto_productos datos){
+ 
     public void updateProductos(final Context context, final String id, final String nombre, final String descripcion, final String stock, final String precio){
         /*Toast.makeText(context, "Id: " + id
                 + "\nNombre Producto:" + nombre
