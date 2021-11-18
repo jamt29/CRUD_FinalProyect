@@ -66,7 +66,7 @@ public class vista extends AppCompatActivity {
         Bundle data = null;
         if(data != null){
             id = data.getString("id_categoria");
-            nombre = data.getString("nombre_categoria");
+            nombre = data.getString("nom_categoria");
             //Toast.makeText(getContext(), "data: "+id+"\n"+nombre, Toast.LENGTH_SHORT).show();
         }
 
@@ -110,7 +110,7 @@ public class vista extends AppCompatActivity {
     }
 
 
-    private void loadProductos(final Context context, final String nombre_categoria) {
+    private void loadProductos(final Context context, final String nom_categoria) {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, UrlVar.URL_consulta_catproducto,
                 new Response.Listener<String>() {
                     @Override
@@ -118,7 +118,7 @@ public class vista extends AppCompatActivity {
                         try {
                             JSONArray array = new JSONArray(response);
                             int totalEncontrados = array.length();
-                            Toast.makeText(context, "Total: "+totalEncontrados, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Total: "+totalEncontrados, Toast.LENGTH_SHORT).show();
                             for (int i = 0; i < array.length(); i++) {
                                 JSONObject articulosObject = array.getJSONObject(i);
 
@@ -136,7 +136,7 @@ public class vista extends AppCompatActivity {
                                 ));
                             }
 
-                            //Aqui va
+
                             productAdapter = new ProductAdapter(getApplicationContext(), productosList);
                             recycler.setAdapter(productAdapter);
 
@@ -148,14 +148,14 @@ public class vista extends AppCompatActivity {
                                     vistaP vista = new vistaP();
 
                                     Bundle data = new Bundle();
-                                    data.putString("name_cat", productosList.get(position).getNombre_categoria());
-                                    data.putString("id_prod", productosList.get(position).getId_producto());
-                                    data.putString("name_prod", productosList.get(position).getNombre_producto());
-                                    data.putString("des_prod", productosList.get(position).getDes_producto());
+                                    data.putString("nom_categoria", productosList.get(position).getNom_categoria());
+                                    data.putString("id_producto", productosList.get(position).getId_producto());
+                                    data.putString("nom_producto", productosList.get(position).getNom_producto());
+                                    data.putString("des_producto", productosList.get(position).getDes_producto());
                                     data.putString("stock", String.valueOf(productosList.get(position).getStock()));
                                     data.putString("precio", String.valueOf(productosList.get(position).getPrecio()));
-                                    data.putString("id_cat", String.valueOf(productosList.get(position).getCategoria()));
-                                    data.putString("fecha", productosList.get(position).getFecha());
+                                    data.putString("id_categoria", String.valueOf(productosList.get(position).getCategoria()));
+                                    data.putString("fecha_entrada", productosList.get(position).getFecha());
                                     ;
 
                                     //FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -190,7 +190,7 @@ public class vista extends AppCompatActivity {
                 Map<String, String> map = new HashMap<>();
                 map.put("Content-Type", "application/json; charset=utf-8");
                 map.put("Accept", "application/json");
-                map.put("nombre_categoria", nombre_categoria);
+                map.put("nom_categoria", nom_categoria);
                 return map;
             }
         };

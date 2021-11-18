@@ -93,16 +93,16 @@ public class vistaP extends AppCompatActivity {
         Bundle data = null;
         if (data != null) {
 
-            String name_cat = data.getString("name_cat");
+            String name_cat = data.getString("nom_categoria");
             tv_NameCategoria.setText(name_cat);
 
-            String id_prod = data.getString("id_prod");
+            String id_prod = data.getString("id_producto");
             et_codigoproducto.setText(id_prod);
 
-            String name_prod = data.getString("name_prod");
+            String name_prod = data.getString("nom_producto");
             et_nombreproducto.setText(name_prod);
 
-            String des_prod = data.getString("des_prod");
+            String des_prod = data.getString("des_producto");
             et_descripcion.setText(des_prod);
 
             String stock = data.getString("stock");
@@ -111,7 +111,7 @@ public class vistaP extends AppCompatActivity {
             String precio = data.getString("precio");
             et_precio.setText(precio);
 
-            String id_cat = data.getString("id_cat");
+            String id_cat = data.getString("id_categoria");
             et_idcategoria.setText(id_cat);
 
             String fecha = data.getString("fecha");
@@ -245,12 +245,12 @@ public class vistaP extends AppCompatActivity {
                 map.put("Content-Type", "application/json; charset=utf-8");
                 map.put("Accept", "application/json");
                 //Este dato lo envio para saber que registro se debe actualizar en la base de datos.
-                map.put("id", id);
+                map.put("id_producto", id);
                 //A continuación los datos que se debe actualizar en la base de datos.
-                map.put("nombre_producto", nombre);
-                map.put("descripcion_producto", descripcion);
-                map.put("stock_producto", stock);
-                map.put("precio_producto", precio);
+                map.put("nom_producto", nombre);
+                map.put("des_producto", descripcion);
+                map.put("stock", stock);
+                map.put("precio", precio);
                 return map;
             }
         };
@@ -321,7 +321,7 @@ public class vistaP extends AppCompatActivity {
                         Map<String, String> map = new HashMap<String, String>();
                         map.put("Content-Type", "application/json; charset=utf-8");
                         map.put("Accept", "application/json");
-                        map.put("id", id_producto);
+                        map.put("id_producto", id_producto);
                         return map;
                     }
                 };

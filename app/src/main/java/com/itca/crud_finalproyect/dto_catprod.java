@@ -3,9 +3,9 @@ package com.itca.crud_finalproyect;
 import android.os.Parcelable;
 
 public class dto_catprod {
-    String nombre_categoria;
+    String nom_categoria;
     String id_producto;
-    String nombre_producto;
+    String nom_producto;
     String des_producto;
     double stock;
     double precio;
@@ -16,10 +16,10 @@ public class dto_catprod {
     }
 
 
-    public dto_catprod(String nombre_categoria, String id_producto, String nombre_producto, String des_producto, double stock, double precio, int categoria, String fecha) {
-        this.nombre_categoria = nombre_categoria;
+    public dto_catprod(String nom_categoria, String id_producto, String nom_producto, String des_producto, double stock, double precio, int categoria, String fecha) {
+        this.nom_categoria = nom_categoria;
         this.id_producto = id_producto;
-        this.nombre_producto = nombre_producto;
+        this.nom_producto = nom_producto;
         this.des_producto = des_producto;
         this.stock = stock;
         this.precio = precio;
@@ -27,12 +27,12 @@ public class dto_catprod {
         this.fecha = fecha;
     }
 
-    public String getNombre_categoria() {
-        return nombre_categoria;
+    public String getNom_categoria() {
+        return nom_categoria;
     }
 
-    public void setNombre_categoria(String nombre_categoria) {
-        this.nombre_categoria = nombre_categoria;
+    public void setNom_categoria(String nom_categoria) {
+        this.nom_categoria = nom_categoria;
     }
 
     public String getId_producto() {
@@ -43,12 +43,12 @@ public class dto_catprod {
         this.id_producto = id_producto;
     }
 
-    public String getNombre_producto() {
-        return nombre_producto;
+    public String getNom_producto() {
+        return nom_producto;
     }
 
-    public void setNombre_producto(String nombre_producto) {
-        this.nombre_producto = nombre_producto;
+    public void setNom_producto(String nom_producto) {
+        this.nom_producto = nom_producto;
     }
 
     public String getDes_producto() {

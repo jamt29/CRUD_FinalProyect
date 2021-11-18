@@ -19,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.google.android.material.textfield.TextInputLayout;
+import com.shashank.sony.fancytoastlib.FancyToast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -120,10 +121,11 @@ public class categoria extends Activity implements View.OnClickListener {
                     String mensaje = requestJSON.getString("mensaje");
 
                     if(estado.equals("1")){
-                        Toast.makeText(context, mensaje, Toast.LENGTH_SHORT).show();
-                        //Toast.makeText(context, "Registro almacenado en MySQL.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
+                        FancyToast.makeText(categoria.this,"Categoria registrado correctamente",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
                     }else if(estado.equals("2")){
-                        Toast.makeText(context, ""+mensaje, Toast.LENGTH_SHORT).show();
+                        FancyToast.makeText(categoria.this,"Categoria registrado correctamente",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
+                        Toast.makeText(getApplicationContext(), ""+mensaje, Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (JSONException e) {

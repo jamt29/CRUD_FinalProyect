@@ -55,13 +55,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public void onBindViewHolder(@NonNull ProductAdapter.ProductViewHolder holder, int position) {
         dto_catprod datos = productList.get(position);
 
-        holder.textViewNombre1.setText(datos.getId_producto() + ":" + datos.getNombre_producto());
+        holder.textViewNombre1.setText(datos.getId_producto() + ":" + datos.getNom_producto());
         holder.textViewDescripcion1.setText(datos.getDes_producto());
         holder.textViewPrecio1.setText(String.valueOf(datos.getPrecio()));
         holder.textViewStock1.setText(String.valueOf(datos.getStock()));
-        holder.textViewCategoria1.setText(String.valueOf(datos.getCategoria()) + ":" + datos.getNombre_categoria());
+        holder.textViewCategoria1.setText(String.valueOf(datos.getCategoria()) + ":" + datos.getNom_categoria());
         holder.textViewFecha.setText(datos.getFecha());
-        holder.textViewTitleProducto.setText(datos.getNombre_producto());
+        holder.textViewTitleProducto.setText(datos.getNom_producto());
 
     }
 

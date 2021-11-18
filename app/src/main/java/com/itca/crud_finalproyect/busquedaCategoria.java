@@ -85,7 +85,7 @@ public class busquedaCategoria extends Activity {
                     vista vista = new vista();
                     Bundle data = new Bundle();
                     data.putString("id_categoria", idcategoria);
-                    data.putString("nombre_categoria", nombrecategoria);
+                    data.putString("nom_categoria", nombrecategoria);
 
 
                     //FragmentTransaction ft = getSupportFragmentManager().beginTransaction();

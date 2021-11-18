@@ -215,9 +215,7 @@ public class productos extends Activity {
                                 int estado_categoria = Integer.parseInt(categoriasObject.getString("estado_categoria"));
                                 //Encapsulo registro por registro encontrado dentro del objeto de manera temporal
                                 obj_categorias = new dto_categorias(id_categoria, nombre_categoria, estado_categoria);
-                                /*obj_categorias.setId_categoria(id_categoria);
-                                obj_categorias.setNom_categoria(nombre_categoria);
-                                obj_categorias.setEstado_categoria(estado_categoria);*/
+
 
                                 //Agrego todos los registros en el arraylist
                                 listaCategorias.add(obj_categorias);
@@ -256,8 +254,8 @@ public class productos extends Activity {
     /*private void save_productos(final Context context, final int id_prod, final String nom_prod, final String des_prod,
                                 final double stock, final double precio, final String uni_medida, final int estado_prod,
                                 final int categoria){*/
-    private void save_productos(final Context context, final String id_prod, final String nom_prod, final String des_prod,
-                                final String stock, final String precio, final String uni_medida, final String estado_prod,
+    private void save_productos(final Context context, final String id_producto, final String nom_producto, final String des_producto,
+                                final String stock, final String precio, final String unidad_medida, final String estado_producto,
                                 final String categoria){
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, UrlVar.URL_registrar_productos, new Response.Listener<String>() {
@@ -271,10 +269,10 @@ public class productos extends Activity {
                     String mensaje = requestJSON.getString("mensaje");
 
                     if(estado.equals("1")){
-                        Toast.makeText(context, mensaje, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
                         //Toast.makeText(context, "Registro almacenado en MySQL.", Toast.LENGTH_SHORT).show();
                     }else if(estado.equals("2")){
-                        Toast.makeText(context, ""+mensaje, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), ""+mensaje, Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (JSONException e) {
@@ -294,13 +292,13 @@ public class productos extends Activity {
                 Map<String, String> map = new HashMap<>();
                 map.put("Content-Type", "application/json; charset=utf-8");
                 map.put("Accept", "application/json");
-                map.put("id_prod", id_prod);
-                map.put("nom_prod", nom_prod);
-                map.put("des_prod", des_prod);
+                map.put("id_producto", id_producto);
+                map.put("nom_producto", nom_producto);
+                map.put("des_producto", des_producto);
                 map.put("stock", stock);
                 map.put("precio", precio);
-                map.put("uni_medida", uni_medida);
-                map.put("estado_prod", estado_prod);
+                map.put("unidad_medida", unidad_medida);
+                map.put("estado_producto", estado_producto);
                 map.put("categoria", categoria);
                 return map;
             }
